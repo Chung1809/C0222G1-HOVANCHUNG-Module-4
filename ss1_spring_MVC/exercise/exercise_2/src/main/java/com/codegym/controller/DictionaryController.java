@@ -14,13 +14,14 @@ public class DictionaryController {
     private IDictionaryService dictionaryService;
 
     @GetMapping("/home")
-    public String home(){
+    public String home() {
         return "home";
     }
+
     @PostMapping("/home")
-    public String dictionary(@RequestParam String word , Model model){
-        model.addAttribute("dictionary",dictionaryService.translate(word));
-        model.addAttribute("word",word);
+    public String dictionary(@RequestParam String word, Model model) {
+        model.addAttribute("dictionary", dictionaryService.translate(word));
+        model.addAttribute("word", word);
         return "home";
     }
 
