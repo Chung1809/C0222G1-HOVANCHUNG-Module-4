@@ -8,9 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form action="/home" method="post">
+    <tr>
+        <input type="text" placeholder="Enter email" name="validate" value="${validate}">
+        <p>${mess}</p>
+    </tr>
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>

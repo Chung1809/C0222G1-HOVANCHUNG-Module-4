@@ -1,4 +1,5 @@
 package codegym.service;
 
-public interface EmailService {
+public interface IEmailService {
+    Boolean email(String email);
 }
