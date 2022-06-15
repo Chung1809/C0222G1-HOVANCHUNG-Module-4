@@ -1,5 +1,5 @@
 package codegym.service;
 
 public interface ICalculateService {
-    String calculate(String operator ,Double number1,Double number2);
+    String calculate(String operator ,String number1,String number2);
 }

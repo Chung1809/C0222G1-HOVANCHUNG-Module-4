@@ -20,8 +20,8 @@ public class CalculateController {
 
     @PostMapping("/home")
     public String calculate(@RequestParam String operator,
-                            @RequestParam Double number1,
-                            @RequestParam Double number2,
+                            @RequestParam String number1,
+                            @RequestParam String number2,
                             Model model) {
         String result = calculateService.calculate(operator, number1, number2);
         model.addAttribute("result", result);
