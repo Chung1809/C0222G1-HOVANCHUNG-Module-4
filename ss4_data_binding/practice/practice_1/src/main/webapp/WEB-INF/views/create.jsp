@@ -13,18 +13,18 @@
 </head>
 <body>
 <h2>CREATE EMPLOYEE</h2>
-<form:form action="/home" method="post" modelAttribute="employeeList">
+<form:form action="/home" method="post" modelAttribute="employee">
     <table>
         <tr>
-            <td><form:label path="id">Employee ID: </form:label></td>
-            <td><form:input path="id"/></td>
+            <td>Employee ID: </td>
+            <td><form:input path="id" /></td>
         </tr>
         <tr>
-            <td><form:label path="name">Employee's name: </form:label></td>
+            <td>Employee's name: </td>
             <td><form:input path="name"/></td>
         </tr>
         <tr>
-            <td><form:label path="contactNumber">Contact's number: </form:label></td>
+            <td>Contact's number: </td>
             <td><form:input path="contactNumber"/></td>
         </tr>
         <tr>
