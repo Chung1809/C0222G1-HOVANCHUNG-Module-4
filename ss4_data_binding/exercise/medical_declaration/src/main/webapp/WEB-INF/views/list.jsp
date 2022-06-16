@@ -14,14 +14,16 @@
 <body>
 <h2>TỜ KHAI Y TẾ ĐÃ KHAI BÁO</h2>
 
-    <c:forEach items="${list}" var="declaration" varStatus="status">
+    <c:forEach items="${declaration}" var="declaration" >
         <p>Họ tên: ${declaration.name}</p>
-        <p>Năm sinh: ${declaration.birhtDay}</p>
+        <p>Năm sinh: ${declaration.birthDay}</p>
+        <p>Giới tính: ${declaration.gender}</p>
+        <p>Quốc tịch: ${declaration.nationality}</p>
         <p>Số CMND hoặc hộ chiếu: ${declaration.card}</p>
         <p>Thông tin đi lại: ${declaration.informationTravel}</p>
         <p>Số hiệu phương tiện: ${declaration.vehicleNumber}</p>
         <p>Số ghế: ${declaration.seats}</p>
-        <p>Ngày bắt đầu: ${declaration.departureDay}/${declaration.departureMonth}/${declaration.departureMonth}</p>
+        <p>Ngày bắt đầu: ${declaration.departureDay}/${declaration.departureMonth}/${declaration.departureYear}</p>
         <p>Ngày kết thúc: ${declaration.endDay}/${declaration.endMonth}/${declaration.endYear}</p>
         <p>Các nơi đã đi đến trong vòng 14 ngày qua: ${declaration.destinationInformation}</p>
 

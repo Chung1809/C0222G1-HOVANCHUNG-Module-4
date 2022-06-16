@@ -35,7 +35,7 @@ public class MedicalDeclarationController {
     }
     @GetMapping("/list")
     public String medicalList(Model model ){
-        model.addAttribute("list", medicalDeclarationService.findAll());
+        model.addAttribute("declaration",medicalDeclarationService.findAll());
         return "list";
     }
     @PostMapping("/create")

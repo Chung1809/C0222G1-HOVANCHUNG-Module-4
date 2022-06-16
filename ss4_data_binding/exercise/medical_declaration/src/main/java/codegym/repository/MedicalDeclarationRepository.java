@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public class MedicalDeclarationRepository implements IMedicalDeclarationRepository {
-    private List<MedicalDeclaration> medicalDeclarations = new ArrayList<>();
+    private  static List<MedicalDeclaration> medicalDeclarations = new ArrayList<>();
     private static List<String> birthday = new ArrayList<>();
     private static List<String> gender = new ArrayList<>();
     private static List<String> nationality = new ArrayList<>();
@@ -19,12 +19,15 @@ public class MedicalDeclarationRepository implements IMedicalDeclarationReposito
     private static List<String> endDay = new ArrayList<>();
     private static List<String> endMonth = new ArrayList<>();
     private static List<String> endYear = new ArrayList<>();
-    private static List<MedicalDeclaration> medicalDeclarationList = new ArrayList<>();
+
 
     static {
 
-        medicalDeclarationList.add(new MedicalDeclaration("HỒ VĂN CHUNG", "2000", "Nam", "Việt Nam", "1975161", "Tàu thuyền", "1234", "5"
-                , "18", "09", "2000", "20", "06", "2010", "Không"));
+        medicalDeclarations.add(new MedicalDeclaration("HỒ VĂN CHUNG", "2000", "Nam",
+                "Việt Nam", "1975161", "Tàu thuyền", "1234", "5"
+                , "18", "09", "2000", "20", "06",
+                "2010", "Không"));
+
         birthday.add("1990");
         birthday.add("1991");
         birthday.add("1992");
@@ -171,7 +174,7 @@ public class MedicalDeclarationRepository implements IMedicalDeclarationReposito
 
     @Override
     public void save(MedicalDeclaration medicalDeclaration) {
-        medicalDeclarationList.add(medicalDeclaration);
+        medicalDeclarations.add(medicalDeclaration);
     }
 
     @Override
