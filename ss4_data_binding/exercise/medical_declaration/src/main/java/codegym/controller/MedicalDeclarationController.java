@@ -2,7 +2,6 @@ package codegym.controller;
 
 import codegym.model.MedicalDeclaration;
 import codegym.service.IMedicalDeclarationService;
-import codegym.service.MedicalDeclarationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,8 +18,8 @@ public class MedicalDeclarationController {
     private IMedicalDeclarationService medicalDeclarationService;
 
     @GetMapping("/create")
-    public String medical(Model model){
-        model.addAttribute("medical",new MedicalDeclaration());
+    public String medical(Model model) {
+        model.addAttribute("medical", new MedicalDeclaration());
         model.addAttribute("birthday", medicalDeclarationService.birthDay());
         model.addAttribute("gender", medicalDeclarationService.gender());
         model.addAttribute("nationality", medicalDeclarationService.nationality());
@@ -33,14 +32,16 @@ public class MedicalDeclarationController {
         model.addAttribute("endYear", medicalDeclarationService.endYear());
         return "medical";
     }
+
     @GetMapping("/list")
-    public String medicalList(Model model ){
-        model.addAttribute("declaration",medicalDeclarationService.findAll());
+    public String medicalList(Model model) {
+        model.addAttribute("declaration", medicalDeclarationService.findAll());
         return "list";
     }
+
     @PostMapping("/create")
     public String medicalDeclaration(@ModelAttribute("medical") MedicalDeclaration medicalDeclaration,
-                            RedirectAttributes redirectAttributes) {
+                                     RedirectAttributes redirectAttributes) {
 
         medicalDeclarationService.save(medicalDeclaration);
 
