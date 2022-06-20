@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>abc</title>
+</head>
+<body>
+<a href="/list">Back list</a>
+<form th:action="@{/create}" method="post" th:object="${create}">
+    <tr>
+        <td>ID</td>
+        <input type="hidden" th:field="*{id}">
+    </tr>
+    <tr>
+        <td>Name</td>
+        <input type="text" th:field="*{name}">
+    </tr>
+    <tr>
+        <td>ARTIST</td>
+        <input type="text" th:field="*{artist}">
+    </tr>
+    <tr>
+        <td>TYPE MUSIC</td>
+        <input type="text" th:field="*{typeMusic}">
+    </tr>
+    <tr>
+        <td>PATH</td>
+        <input type="text" th:field="*{linkFileMusic}">
+    </tr>
+    <tr>
+        <button type="submit">Save</button>
+    </tr>
+</form>
+</body>
+</html>
+</body>
+</html>

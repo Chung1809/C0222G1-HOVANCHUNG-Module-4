@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>abc</title>
+</head>
+<body>
+<a href="/list">Back list</a>
+<form th:action="@{/create}" method="post" th:object="${create}">
+    <tr>
+        <td>ID</td>
+        <input type="hidden" th:field="*{id}">
+    </tr>
+    <tr>
+        <td>Name</td>
+        <input type="text" th:field="*{name}">
+    </tr>
+    <tr>
+        <td>Price</td>
+        <input type="text" th:field="*{price}">
+    </tr>
+    <tr>
+        <td>Description</td>
+        <input type="text" th:field="*{description}">
+    </tr>
+    <tr>
+        <td>Producer</td>
+        <input type="text" th:field="*{producer}">
+    </tr>
+    <tr>
+        <button type="submit">Save</button>
+    </tr>
+</form>
+</body>
+</html>
