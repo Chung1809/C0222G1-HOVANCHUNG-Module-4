@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>abc</title>
+</head>
+<body>
+<a href="/list">Back list</a>
+<form th:action="@{/create}" method="post" th:object="${create}">
+    <div>
+        <td>ID</td>
+        <input type="hidden" th:field="*{id}">
+    </div>
+    <div>
+        <td>NAME</td>
+        <input type="text" th:field="*{name}">
+        <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+    </div>
+    <div>
+        <td>PRICE</td>
+        <input type="text" th:field="*{price}">
+        <p style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+    </div>
+   <div>
+       <td>DESCRIPTION</td>
+       <input type="text" th:field="*{description}">
+       <p style="color: red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
+   </div>
+    <div>
+        <td>PRODUCER</td>
+        <input type="text" th:field="*{producer}">
+        <p style="color: red" th:if="${#fields.hasErrors('producer')}" th:errors="*{producer}"></p>
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+</body>
+</html>
+</body>
+</html>

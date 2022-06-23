@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>abc</title>
+</head>
+<body>
+<a href="/list">Back list</a>
+<form th:action="@{/create}" method="post" th:object="${create}">
+    <div>
+        <td>ID</td>
+        <input type="hidden" th:field="*{id}">
+    </div>
+    <div>
+        <td>NAME</td>
+        <input type="text" th:field="*{name}">
+        <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+    </div>
+    <div>
+        <td>SINGLE</td>
+        <input type="text" th:field="*{single}">
+        <p style="color: red" th:if="${#fields.hasErrors('single')}" th:errors="*{single}"></p>
+    </div>
+   <div>
+       <td>TYPE MUSIC</td>
+       <input type="text" th:field="*{typeMusic}">
+       <p style="color: red" th:if="${#fields.hasErrors('typeMusic')}" th:errors="*{typeMusic}"></p>
+   </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+</body>
+</html>
+</body>
+</html>
