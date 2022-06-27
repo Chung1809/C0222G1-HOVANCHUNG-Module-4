@@ -6,23 +6,28 @@
 </head>
 <body>
 <a href="/list">Back list</a>
-<form th:action="@{/edit}" method="post" th:object="${blog}">
+<form th:action="@{/edit}" method="post" th:object="${product}">
     <tr>
         <td>ID</td>
         <input type="text" th:field="*{id}" readonly>
     </tr>
     <tr>
-        <td>TITLE</td>
-        <input type="text" th:field="*{title}">
+        <td>NAME</td>
+        <input type="text" th:field="*{nameProduct}">
     </tr>
     <tr>
-        <td>CONTENT</td>
-        <input type="text" th:field="*{content}">
+        <td>PRICE</td>
+        <input type="text" th:field="*{price}">
     </tr>
     <tr>
-        <td>DATE</td>
-        <input type="date" th:field="*{dateWrite}">
+        <td>DESCRIPTION</td>
+        <input type="text" th:field="*{description}">
     </tr>
+    <tr>
+        <td>PRODUCER</td>
+        <input type="text" th:field="*{producer}">
+    </tr>
+
     <tr>
         <button type="submit">UPDATE</button>
     </tr>

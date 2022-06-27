@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/list">Back list</a>
+<form th:action="@{/edit}" method="post" th:object="${customer}">
+    private Integer customerId;
+    private String customerCode;
+    private Integer customerTypeId;
+    private String customerName;
+    @Column(columnDefinition = "date")
+    private String birthDay;
+    private Boolean gender;
+    private String customerIdCard;
+    private String phone;
+    private String email;
+    private String address;
+   <div>
+       <tr>
+           <td>ID</td>
+           <input type="text" th:field="*{customerId}" readonly>
+       </tr>
+   </div>
+    <div>
+        <tr>
+            <td>CODE</td>
+            <input type="text" th:field="*{customerCode}" readonly>
+        </tr>
+    </div>
+    <div>
+        <tr>
+            <td>TYPE CUSTOMER</td>
+            <td>
+                <select th:field = "*{type_customer}">
+                    <option th:each="typeCutomer : ${listCustomerType}" th:value="${typeCutomer.typeCustomerId}"
+                            th:text="${typeCustomer.typeCustomerName}"></option>
+                </select>
+            </td>
+        </tr>
+    </div>
+
+   <div>
+       <tr>
+           <td>NAME</td>
+           <input type="text" th:field="*{customerName}">
+       </tr>
+   </div>
+    <div>
+        <tr>
+            <td>BIRTHDAY</td>
+            <input type="date" th:field="*{birthDay}">
+        </tr>
+    </div>
+    <div>
+        <tr>
+            <td>GENDER</td>
+            <select th:field = "*{gender}">
+                <option th:value="true" th: th:text="Male"></option>
+                <option th:value="false" th: th:text="Female"></option>
+            </select>
+        </tr>
+    </div>
+   <div>
+       <tr>
+           <td>CARD</td>
+           <input type="text" th:field="*{customerIdCard}">
+       </tr>
+   </div>
+   <div>
+       <tr>
+           <td>PHONE</td>
+           <input type="text" th:field="*{phone}">
+       </tr>
+   </div>
+  <div>
+      <tr>
+          <td>EMAIL</td>
+          <input type="text" th:field="*{email}">
+      </tr>
+  </div>
+    <div>
+        <tr>
+            <td>ADDRESS</td>
+            <input type="text" th:field="*{address}">
+        </tr>
+    </div>
+
+
+    <tr>
+        <button type="submit">UPDATE</button>
+    </tr>
+</form>
+</body>
+</html>

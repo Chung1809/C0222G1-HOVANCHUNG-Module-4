@@ -9,14 +9,14 @@
 <tr th:each="list : ${findById}">
     <td>ID :</td>
     <td th:text="${list.id}"></td>
-    <td>TITLE :</td>
-    <td th:text="${list.title}"></td>
-    <td>CONTENT :</td>
-    <td th:text="${list.content}"></td>
-    <td>DATE :</td>
-    <td th:text="${list.dateWrite}"></td>
-    <td>CATEGORY :</td>
-    <td th:text="${list.category.name}"></td>
+    <td>NAME :</td>
+    <td th:text="${list.nameProduct}"></td>
+    <td>PRICE :</td>
+    <td th:text="${list.price}"></td>
+    <td>DESCRIPTION :</td>
+    <td th:text="${list.description}"></td>
+    <td>PRODUCER :</td>
+    <td th:text="${list.producer}"></td>
 
 
 </tr>

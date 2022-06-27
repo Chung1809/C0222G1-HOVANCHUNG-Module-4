@@ -38,6 +38,6 @@ public interface IBlogRepository extends JpaRepository<Blog, Integer> {
     @Query(value = " update blog set status = 1 where id = :id", nativeQuery = true)
     void deleteBlog(@Param("id") Integer id);
 
-    @Query(value = "select *from blog where title like :title", nativeQuery = true)
+    @Query(value = "select *from blog where title like :title and status = 0", nativeQuery = true)
     Page<Blog> searchBlog(@Param("title") String title, Pageable pageable);
 }

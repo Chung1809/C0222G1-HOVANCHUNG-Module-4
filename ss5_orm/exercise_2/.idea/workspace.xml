@@ -20,106 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98f6b15e-6ec4-4b28-b276-4f0e97a98995" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ss4_data_binding/exercise/music/spring-upload-file" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss4_data_binding/exercise/music/spring-upload-file" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/classes/java/main/codegym/controller/MusicController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/classes/java/main/codegym/model/Music.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/classes/java/main/codegym/repository/BaseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/classes/java/main/codegym/repository/IMusicRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/classes/java/main/codegym/repository/MusicRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/classes/java/main/codegym/service/IMusicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/classes/java/main/codegym/service/MusicService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/libs/exercise-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/resources/main/hibernate.conf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/java/codegym/controller/MusicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/java/codegym/model/Music.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/java/codegym/repository/BaseRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/java/codegym/repository/IMusicRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/java/codegym/repository/MusicRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/java/codegym/service/IMusicService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/java/codegym/service/MusicService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/resources/hibernate.conf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/bootstrap-4.0.0-dist (1)/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise_1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,6 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655731374024</updated>
       <workItem from="1655731380167" duration="3388000" />
+      <workItem from="1655782503868" duration="238000" />
     </task>
     <servers />
   </component>
@@ -271,6 +173,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="215" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1655731978005">
@@ -281,10 +184,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="566" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1655732219636" />
-    <state x="541" y="163" key="FileChooserDialogImpl" timestamp="1655734748422">
+    <state x="541" y="163" key="FileChooserDialogImpl" timestamp="1655782739823">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="541" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1655734748422" />
+    <state x="541" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1655782739823" />
     <state width="1002" height="205" key="GridCell.Tab.0.bottom" timestamp="1655734798734">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -333,5 +236,9 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1002" height="205" key="GridCell.Tab.2.right/0.0.1536.816@0.0.1536.816" timestamp="1655734798734" />
+    <state x="201" y="19" key="new project wizard" timestamp="1655782741441">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="201" y="19" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1655782741441" />
   </component>
 </project>

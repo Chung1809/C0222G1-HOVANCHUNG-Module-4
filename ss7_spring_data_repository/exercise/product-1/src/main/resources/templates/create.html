@@ -13,23 +13,21 @@
         <input type="hidden" th:field="*{id}">
     </tr>
     <tr>
-        <td>TITLE</td>
-        <input type="text" th:field="*{title}">
+        <td>NAME</td>
+        <input type="text" th:field="*{nameProduct}">
     </tr>
     <tr>
-        <td>CONTENT</td>
-        <input type="text" th:field="*{content}">
+        <td>PRICE</td>
+        <input type="text" th:field="*{price}">
     </tr>
     <tr>
-        <td>DATE</td>
-        <input type="date" th:field="*{dateWrite}">
+        <td>DESCRIPTION</td>
+        <input type="text" th:field="*{description}">
     </tr>
       <tr>
-          <td>CATEGORY</td>
+          <td>PRODUCER</td>
            <td>
-               <select th:field = "*{category}">
-                   <option th:each="category:${listCategory}" th:value="${category.id}" th:text="${category.name}"></option>
-               </select>
+               <input type="text" th:field="*{producer}">
            </td>
       </tr>
     <tr>
