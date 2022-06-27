@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e64a1bad-17a4-462c-a7a5-d8630b0f94e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ss9_spring aop/exercise/src/main/java/example/demo/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_spring aop/exercise/src/main/java/example/demo/model/ApplicationBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_spring aop/exercise/src/main/java/example/demo/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4_data_binding/exercise/music/spring-upload-file" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss4_data_binding/exercise/music/spring-upload-file" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2B9I88tQBAN0AcSbsnwOzCwR5yC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e64a1bad-17a4-462c-a7a5-d8630b0f94e2" name="Default Changelist" comment="" />
+      <created>1656311711500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656311711500</updated>
+      <workItem from="1656311713129" duration="5000" />
+    </task>
+    <servers />
+  </component>
+</project>
