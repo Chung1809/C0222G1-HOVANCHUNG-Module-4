@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>abc</title>
+</head>
+<body>
+<a href="/list">Back list</a>
+<form th:action="@{/create}" method="post" th:object="${create}">
+    <tr>
+        <td>ID</td>
+        <input type="hidden" th:field="*{id}">
+    </tr>
+    <tr>
+        <td>TITLE</td>
+        <input type="text" th:field="*{title}">
+    </tr>
+    <tr>
+        <td>CONTENT</td>
+        <input type="text" th:field="*{content}">
+    </tr>
+    <tr>
+        <td>DATE</td>
+        <input type="date" th:field="*{dateWrite}">
+    </tr>
+      <tr>
+          <td>CATEGORY</td>
+           <td>
+               <select th:field = "*{category}">
+                   <option th:each="category:${listCategory}" th:value="${category.id}" th:text="${category.name}"></option>
+               </select>
+           </td>
+      </tr>
+    <tr>
+        <button type="submit">Save</button>
+    </tr>
+</form>
+</body>
+</html>
+</body>
+</html>
