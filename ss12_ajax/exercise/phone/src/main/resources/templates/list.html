@@ -78,7 +78,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="updateSmartphone">Save changes</button>
+                <button type="button" class="btn btn-primary" id="updateSmartphone" data-bs-dismiss = "modal">Save changes</button>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
 
 <script type="text/javascript">
 
-    function addNewSmartPhone() {
+     function addNewSmartPhone() {
         let producer = $('#producer').val();
         let model = $('#model').val();
         let price = $('#price').val();
@@ -104,25 +104,27 @@
             model: model,
             price: price
         };
-        $.ajax({
+         $.ajax({
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
+             async: true,
             type: "POST",
             data: JSON.stringify(newSmartphone),
             url: "/phone/add",
-            success: successHandler()
+             success:  successHandler
 
         });
         event.preventDefault();
     }
 
-    function successHandler() {
+     function successHandler() {
         $.ajax({
             type: "GET",
             url: "/phone",
-            success: function (data) {
+            async: true,
+             success:  function (data) {
                 let content = '    <tr>\n' +
                     '        <td>Producer</td>\n' +
                     '        <td>Model</td>\n' +
@@ -134,7 +136,6 @@
                     content += getSmartphone(data[i]);
                 }
                 document.getElementById('smartphoneList').innerHTML = content;
-
             }
         });
     }
@@ -142,7 +143,8 @@
     function getSmartphone(smartphone) {
         return `<tr><td >${smartphone.producer}</td><td >${smartphone.model}</td><td >${smartphone.price}</td>` +
             `<td><a class="deleteSmartphone" href="${smartphone.id}">Delete</a></td>` +
-            `<td><a class="editSmartphone" href="/update/{id}(id=${smartphone.id})">Edit</a></td></tr>`;
+            `<td><a class="editSmartphone" href="${smartphone.id}" data-bs-toggle="modal"
+                   data-bs-target="#exampleModal">Edit</a></td>`;
     }
 
     $(document).ready(function () {
@@ -167,10 +169,16 @@
     // lấy thông tin edit
     $("#smartphoneList").on("click", ".editSmartphone", function (event) {
         let idSmartphone = $(this).attr("href");
+        debugger
         $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             type: "GET",
-            url: `phone/${idSmartphone}`,
+            url: `phone/find/${idSmartphone}`,
             success: function (data) {
+                debugger
                 document.getElementById("updateProducer").value = data.producer;
                 document.getElementById("updateModel").value = data.model;
                 document.getElementById("updatePrice").value = data.price;
@@ -180,6 +188,7 @@
         event.preventDefault();
     })
     $("#updateSmartphone").click(function () {
+        debugger
         let id = $("#id").val();
         let producer = $("#updateProducer").val();
         let model = $("#updateModel").val();
@@ -191,14 +200,14 @@
             price: price
         };
         $.ajax({
-            url: "phone/update",
             type: "PUT",
             data: JSON.stringify(newSmartphone),
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            success: successHandler()
+            url: "phone/update/",
+            success: successHandler
         })
     })
 

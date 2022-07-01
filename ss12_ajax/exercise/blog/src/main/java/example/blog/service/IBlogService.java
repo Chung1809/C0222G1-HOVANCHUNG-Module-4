@@ -4,11 +4,11 @@ import example.blog.model.Blog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface IBlogService {
-    Page<Blog> findAll(Pageable pageable);
-
+    List<Blog> findAll();
     void save(Blog blog);
 
     void update(Blog blog);
@@ -17,7 +17,7 @@ public interface IBlogService {
 
     Optional<Blog> findById(Integer id);
 
-    Page<Blog> search(String title, Pageable pageable);
+    List<Blog> search(String title);
 
 
 }

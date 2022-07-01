@@ -29,16 +29,12 @@ public class SmartPhoneRestController {
         service.save(phone);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-    @PatchMapping("/update/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id , @RequestBody SmartPhone phone){
-        Optional<SmartPhone> phone1 = service.findById(id);
-        if(!phone1.isPresent()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        phone.setId(phone1.get().getId());
+    @PutMapping("/update")
+    public ResponseEntity<?> update(@RequestBody SmartPhone phone){
         service.update(phone);
-        return new ResponseEntity<>(phone, HttpStatus.OK);
+        return new ResponseEntity<>(service.findAll(), HttpStatus.OK);
     }
+
     @DeleteMapping("/remove/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Integer id ){
         Optional<SmartPhone> phone = service.findById(id);

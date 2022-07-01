@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 <body>
-<a href="/create">Create Product</a>
-<table>
+
+<form id="add-smartphone">
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" id="title"></td>
+        </tr>
+        <tr>
+            <td>Content:</td>
+            <td><input type="text" id="content"></td>
+        </tr>
+        <tr>
+            <td>Date write:</td>
+            <td><input type="date" id="date"></td>
+        </tr>
+        <tr>
+            <td>Category:</td>
+            <td><input type="text" id="category"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" onclick="addNewSmartPhone()"></td>
+        </tr>
+    </table>
+</form>
+<form id="blog">
+    <input type="text" id="searchName">
+    <td><input type="submit" value="Search" class="searchNameBlog"></td>
+</form>
+
+<table id="smartphoneList">
     <tr>
-        <th>STT</th>
+
         <th>ID</th>
         <th>TITLE</th>
         <th>CONTENT</th>
@@ -17,52 +49,267 @@
         <th>EDIT</th>
         <th>DELETE</th>
     </tr>
-    <tr th:each="blog,loop : ${list}">
-        <td th:text="${loop.count}"></td>
-        <td >
-            <a th:href="@{/findById/__${blog.id}__}" th:text="${blog.id}"></a>
-        </td>
+    <tr th:each="blog : ${list}">
+        <td th:text="${blog.id}"></td>
         <td th:text="${blog.title}"></td>
         <td th:text="${blog.content}"></td>
         <td th:text="${blog.dateWrite}"></td>
         <td th:text="${ blog.category.name}"></td>
-        <td><a th:href="@{/edit/__${blog.id}__}">Edit</a></td>
-        <td><a class="deleteSmartphone" th:href="@{/remove/__${blog.getId()}__}">Delete</a></td>
+        <td><a class="editBlog" th:href="${blog.getId()}" data-bs-toggle="modal"
+               data-bs-target="#exampleModal">Edit</a></td>
+        <td><a class="deleteBlog" th:href="${blog.getId()}">Delete</a></td>
 
 
     </tr>
+    <tr>
+        <td><button type="button" th:attr="onclick=|more('${list.size()}')|">Tải thêm</button></td>
+    </tr>
 </table>
-<script>
-    $(document).ready(function () {
-        $('.deleteSmartphone').click(function (event) {
-            event.preventDefault();
-            //lay du lieu
-            var a = $(this);
-            var blogId  = a.attr("href");
-            // goi ajax
-            $.ajax({
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                type: "DELETE",
-                url: '/remove/'+blogId,
-                data: JSON.stringify(jsonText),
-                success: function (data) {
-                    a.parent().parent().remove();
-                    alert("Xoá thành công")
-                }
-
-            });
-
-        });
-    })
-</script>
-<div>
-    <a th:if = "${list.hasPrevious()}" th:href="@{/list(page = ${list.number - 1})}">Previous</a>
-    <span th:text="${list.number + 1}"></span>/
-    <span th:text="${list.totalPages}"></span>
-    <a th:if = "${list.hasNext()}" th:href="@{/list(page = ${list.number + 1})}">Next</a>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="id">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" id="updateTitle">
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <input type="text" class="form-control" id="updateContent">
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" class="form-control" id="updateDateWrite">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" class="form-control" id="updateCategory">
+                </div>
+                <div class="form-group"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="updateBlog" data-bs-dismiss="modal">Save changes
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    function addNewSmartPhone() {
+        let title = $('#title').val();
+        let content = $('#content').val();
+        let date = $('#date').val();
+        let category = $('#category').val();
+        let newSmartphone = {
+            title: title,
+            content: content,
+            date: date,
+            category: {
+                id: category
+            }
+        };
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            async: true,
+            type: "POST",
+            data: JSON.stringify(newSmartphone),
+            url: "/blog/add",
+            success: successHandler
+
+        });
+        event.preventDefault();
+    }
+
+    function successHandler() {
+        $.ajax({
+            type: "GET",
+            url: "/blog",
+            async: true,
+            success: function (data) {
+                let content = '    <tr>\n' +
+                    '        <td>ID</td>\n' +
+                    '        <td>TITLE</td>\n' +
+                    '        <td>CONTENT</td>\n' +
+                    '        <td>DATE WRITE</td>\n' +
+                    '        <td>CATEGORY</td>\n' +
+                    '        <td>EDIT</td>\n' +
+                    '        <td>DELETE</td>\n' +
+                    '    </tr>';
+                for (let i = 0; i < data.length; i++) {
+                    content += getBlog(data[i]);
+                }
+                document.getElementById('smartphoneList').innerHTML = content;
+            }
+        });
+    }
+
+    function getBlog(blog) {
+        return `<tr><td >${blog.id}</td>` +
+            `<td >${blog.title}</td>` +
+            `<td >${blog.content}</td>` +
+            `<td >${blog.dateWrite}</td>` +
+            `<td >${blog.category.name}</td>` +
+            `<td><a class="editBlog" href="${blog.id}" data-bs-toggle="modal"
+                   data-bs-target="#exampleModal">Edit</a></td>` +
+            `<td><a class="deleteBlog" href="${blog.id}">Delete</a></td>`;
+
+    }
+
+    $(document).ready(function () {
+        //xoá
+        $("#smartphoneList").on("click", ".deleteBlog", function (event) {
+            let a = $(this);
+            let smartphoneId = a.attr("href");
+            $.ajax({
+                type: "DELETE",
+                url: `blog/remove/${smartphoneId}`,
+                success: function (data) {
+                    a.parent().parent().remove();
+                }
+
+            });
+            event.preventDefault();
+        });
+
+
+    })
+    // lấy thông tin edit
+    $("#smartphoneList").on("click", ".editBlog", function (event) {
+        let idSmartphone = $(this).attr("href");
+        debugger
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            url: `blog/find/${idSmartphone}`,
+            success: function (data) {
+                debugger
+                document.getElementById("updateTitle").value = data.title;
+                document.getElementById("updateContent").value = data.content;
+                document.getElementById("updateDateWrite").value = data.date;
+                document.getElementById("updateCategory").value = data.category;
+                document.getElementById("id").value = data.id;
+            }
+        })
+        event.preventDefault();
+    })
+    $("#updateBlog").click(function () {
+        debugger
+        let id = $("#id").val();
+        let title = $("#updateTitle").val();
+        let content = $("#updateContent").val();
+        let date = $("#updateDateWrite").val();
+        let category = $("#updateCategory").val();
+        let newSmartphone = {
+            id: id,
+            title: title,
+            content: content,
+            date: date,
+            category: {
+                id: category
+            }
+        };
+        $.ajax({
+            type: "PUT",
+            data: JSON.stringify(newSmartphone),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: "blog/update/",
+            success: changeTable()
+        })
+    })
+
+    $("#blog").on("click", ".searchNameBlog", function (event) {
+        let searchBlog = $("#searchName").val();
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            url: `blog/search/${searchBlog}`,
+            success: function (data) {
+                console.log(data)
+                let content = '    <tr>\n' +
+                    '        <td>ID</td>\n' +
+                    '        <td>TITLE</td>\n' +
+                    '        <td>CONTENT</td>\n' +
+                    '        <td>DATE WRITE</td>\n' +
+                    '        <td>CATEGORY</td>\n' +
+                    '        <td>EDIT</td>\n' +
+                    '        <td>DELETE</td>\n' +
+                    '    </tr>';
+                for (let i = 0; i < data.length; i++) {
+                    content += getBlog(data[i]);
+                }
+                document.getElementById('smartphoneList').innerHTML = content;
+            }
+        })
+        event.preventDefault();
+    })
+
+    function more(size) {
+        debugger
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            async: true,
+            type: "GET",
+            data: JSON.stringify(size),
+            url: `/blog/load/${size}`,
+            success: changeTable
+
+        });
+        event.preventDefault();
+    }
+    function changeTable(data) {
+        debugger
+        let content =
+            '        <tr class="w-100">\n' +
+            '            <th>ID </th>\n' +
+            '            <th>TITLE</th>\n' +
+            '            <th>CONTENT</th>\n' +
+            '            <th>DATE WRITE</th>\n' +
+            '            <th>CATEGORY</th>\n' +
+            '            <th>Edit</th>\n' +
+            '            <th>Delete</th>\n' +
+            '        </tr>';
+        for (let i = 0; i < data.length; i++) {
+            content += getBlog(data[i]);
+        }
+        content += `<tr>
+        <td>
+            <button style="background-color: #c69500" class="bi bi-arrow-down" type="button" onclick="more(${data.length})">Tải thêm</button>
+        </td>
+    </tr>`
+
+        document.getElementById('smartphoneList').innerHTML = content;
+    }
+
+</script>
